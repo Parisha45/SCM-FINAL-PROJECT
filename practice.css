@@ -1,0 +1,91 @@
+.logo{
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.menu a{
+text-decoration: none;
+color: white;
+padding: 10px 20px;
+font-size: 20px;
+position:relative;
+
+}
+.menu a:hover{
+    width: 90%;
+    border-bottom: 2px solid indianred;
+    transition: 0.4s linear;
+
+}
+.register a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: indianred;
+    border-radius:8px;
+}
+.register a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+    transition: 0.2s linear;
+}
+.h-txt{
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.h-txt span{
+    letter-spacing: 5px;
+}
+.h-txt h1{
+    font-size: 3.5em;
+}
+.h-txt a{
+    text-decoration: none;
+    background: indianred;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing:5px ;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap:1.5rem;
+}
+.menu  .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+.menu  .box-container .box img{
+    height:10rem;
+    align-items: center;
+}
+.menu  .box-container .box h3{
+    color:#fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.menu  .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+.menu  .box-container .box .price span{
+    
+    font-size: 1.5rem;
+    text-decoration:line-through ;
+  font-weight: lighter;
+
+}
+.menu  .box-container .box:hover {
+    background: #fff;
+}
+.menu  .box-container .box:hover > * {
+    color: var(--black);
+
+}
