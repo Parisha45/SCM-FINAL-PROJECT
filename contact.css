@@ -26,9 +26,9 @@ font-size: 60px;
 margin-left: 10px;
 color: #FFC312;
 }
-
+/*changed color tag*/
 .social_icon span:hover{
-color: white;
+color: rgba(255, 255, 255, 0.971);
 cursor: pointer;
 }
 
@@ -44,7 +44,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
+background-color: #ffd012;
 color: black;
 border:0 !important;
 }
@@ -78,10 +78,12 @@ color: black;
 background-color: white;
 }
 
+/* color comment */
 .links{
 color: white;
 }
 
+/* link tag css */
 /* link tag css */
 .links a{
 margin-left: 4px;
