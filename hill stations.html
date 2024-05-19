@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel-X</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .trip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .trip-card {
+      width: 300px;
+      margin: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .trip-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .trip-details {
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Travel-X</h1>
+ 
+  </header>
+
+  <div class="trip-container" id="tripContainer">
+    
+  </div>
+
+  <script>
+    
+    const tripsData = [
+      {
+        name: "Trip 1",
+        destination: "Ladakh",
+        image: "Thiksay Monastery, Ladakh, India.jpg", 
+      },
+      {
+        name: "Trip 2",
+        destination: "Norway",
+        image: "Lofoten Northern Lights.jpg", 
+      },
+      {
+        name: "Trip 3",
+        destination: "Switzerland",
+        image: "Unknown-3.jpg", 
+      },
+      
+    ];
+
+    
+    function createTripCard(trip) {
+      const tripCard = document.createElement("div");
+      tripCard.classList.add("trip-card");
+
+      const tripImage = document.createElement("img");
+      tripImage.src = trip.image;
+      tripImage.alt = `${trip.name} Image`;
+      tripImage.classList.add("trip-image");
+
+      const tripDetails = document.createElement("div");
+      tripDetails.classList.add("trip-details");
+      tripDetails.innerHTML = `
+        <h2>${trip.name}</h2>
+        <p>${trip.destination}</p>
+      `;
+
+      tripCard.appendChild(tripImage);
+      tripCard.appendChild(tripDetails);
+
+      return tripCard;
+    }
+
+    
+    function displayTrips() {
+      const tripContainer = document.getElementById("tripContainer");
+
+      tripsData.forEach((trip) => {
+        const tripCard = createTripCard(trip);
+        tripContainer.appendChild(tripCard);
+      });
+    }
+
+    
+    window.onload = displayTrips;
+  </script>
+
+</body>
+</html>
